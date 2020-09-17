@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Work Day Scheduler</title>
+</head>
+
+<body>
+  <header class="jumbotron">
+    <h1 class="display-3">Work Day Scheduler</h1>
+    <p class="lead">A simple calendar app for scheduling your work day</p>
+    <p id="currentDay" class="lead"></p>
+  </header>
+  <div class="container">
+    <!-- Timeblocks go here -->
+    <div class="times">
+      <div class="row hourRow" id="9am">
+        <div class="hour col-md-2">
+          <span class="time-block">9AM</span>
+        </div>
+        <div class="col-md-9 description">
+          <textarea id="0" rows = "2" cols= "100%""></textarea>
+        </div>
+        <button class= "col-md-1 saveBtn">
+          <i class="far fa-save fa-lg"></i>
+        </button>
+      </div>
+    </div>
+    <div class="row hourRow" id="10am">
+      <div class="hour col-md-2">
+        <span class="time-block">10AM</span>
+      </div>
+      <div class="col-md-9 description">
+        <textarea id="1" rows = "2" cols= "100%""></textarea>
+      </div>
+      <button class= "col-md-1 saveBtn">
+        <i class="far fa-save fa-lg"></i>
+      </button>
+    </div>
+    <div class="row hourRow" id="11am">
+      <div class="hour col-md-2">
+        <span class="time-block">11AM</span>
+      </div>
+      <div class="col-md-9 description">
+        <textarea id="2" rows = "2" cols= "100%""></textarea>
+      </div>
+      <button class= "col-md-1 saveBtn">
+        <i class="far fa-save fa-lg"></i>
+      </button>
+    </div>
+    <div class="row hourRow" id="12pm">
+      <div class="hour col-md-2">
+        <span class="time-block">12PM</span>
+      </div>
+      <div class="col-md-9 description">
+        <textarea id="3" rows = "2" cols= "100%""></textarea>
+      </div>
+      <button class= "col-md-1 saveBtn">
+        <i class="far fa-save fa-lg"></i>
+      </button>
+    </div>
+    <div class="row hourRow" id="1pm">
+      <div class="hour col-md-2">
+        <span class="time-block">1PM</span>
+      </div>
+      <div class="col-md-9 description">
+        <textarea id="4" rows = "2" cols= "100%""></textarea>
+      </div>
+      <button class= "col-md-1 saveBtn">
+        <i class="far fa-save fa-lg"></i>
+      </button>
+    </div>
+    <div class="row hourRow" id="2pm">
+      <div class="hour col-md-2">
+        <span class="time-block">2PM</span>
+      </div>
+      <div class="col-md-9 description">
+        <textarea id="5" rows = "2" cols= "100%""></textarea>
+      </div>
+      <button class= "col-md-1 saveBtn">
+        <i class="far fa-save fa-lg"></i>
+      </button>
+    </div>
+    <div class="row hourRow" id="3pm">
+      <div class="hour col-md-2">
+        <span class="time-block">3PM</span>
+      </div>
+      <div class="col-md-9 description">
+        <textarea id="6" rows = "2" cols= "100%""></textarea>
+      </div>
+      <button class= "col-md-1 saveBtn">
+        <i class="far fa-save fa-lg"></i>
+      </button>
+    </div>
+    <div class="row hourRow" id="4pm">
+      <div class="hour col-md-2">
+        <span class="time-block">4PM</span>
+      </div>
+      <div class="col-md-9 description">
+        <textarea id="7" rows = "2" cols= "100%""></textarea>
+      </div>
+      <button class= "col-md-1 saveBtn">
+        <i class="far fa-save fa-lg"></i>
+      </button>
+    </div>
+    <div class="row hourRow" id="5pm">
+      <div class="hour col-md-2">
+        <span class="time-block">5PM</span>
+      </div>
+      <div class="col-md-9 description">
+        <textarea id="8" rows = "2" cols= "100%""></textarea>
+      </div>
+      <button class= "col-md-1 saveBtn">
+        <i class="far fa-save fa-lg"></i>
+      </button>
+    </div>
+  </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
