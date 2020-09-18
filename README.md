@@ -3,7 +3,7 @@
 ### Author: David Guthmann
 
 github: https://github.com/Dguthmann/  
-<!-- livesite: To Be Added Later -->
+livesite: https://dguthmann.github.io/day-planner-moment/
 
 ## List of Contents
 
@@ -11,7 +11,7 @@ index.html
 script.js
 style.css
 README.md
-<!-- screenshot.png -->
+screenshot.png
 
 ## Basic Overview of Project
 
@@ -26,7 +26,7 @@ The Save button will save any text in the task box into local memory.
 
 ## Screenshot of Website
 
-<!-- ![Site Screenshot](images/screenshot.png) -->
+![Site Screenshot](screenshot.png)
 
 ## resources Used
 
