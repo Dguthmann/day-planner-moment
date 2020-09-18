@@ -1,5 +1,5 @@
-console.log(moment().format());
-console.log(moment().format("ddd, DD MMM YYYY, h:mm a"));
+// console.log(moment().format());
+// console.log(moment().format("ddd, DD MMM YYYY, h:mm a"));
 
 //TODO: Create 1 row with time, text area, and button using JQuery
 
@@ -21,7 +21,7 @@ var businessHours = ["9AM", "10AM", "11AM", "12PM", "1PM", "2PM", "3PM", "4PM", 
     </div> */}
 
 // TODO: Run a for loop to create all lines of the above block, add a class based off the time
-console.log(moment().format("H"))
+// console.log(moment().format("H"))
 // TODO: Create a for loop
 for (let i = 0; i < businessHours.length; i++) {
     var newRow = $("<div>", {"class":'row time-block'});
@@ -30,17 +30,20 @@ for (let i = 0; i < businessHours.length; i++) {
     // TODO: pull moment for current military time hour moment.js(H), apply index of time +9
     // TODO: if the hour is same (parseInt(moment.js.format(H)) == (i+9)), apply class of present
     if (parseInt(moment().format("H")) == (i + 9)) {
-        var taskCol = $("<textarea>", {"id":`myTask${i}`, "class":'col-md-8 present'})
+        var taskCol = $("<textarea>", {"id":`${i}`, "class":'col-md-8 present'})
 
     // TODO: else (parseInt(moment.js.format(H)) >= (i+9)) if the time has past apply class of past
     } else if (parseInt(moment().format("H")) >= (i + 9)) {
-        var taskCol = $("<textarea>", {"id":`myTask${i}`, "class":'col-md-8 past'})
+        var taskCol = $("<textarea>", {"id":`${i}`, "class":'col-md-8 past'})
 
     // TODO: Else apply class of future.
     } else {
-        var taskCol = $("<textarea>", {"id":`myTask${i}`, "class":'col-md-8 future'})
+        var taskCol = $("<textarea>", {"id":`${i}`, "class":'col-md-8 future'})
     }
-    var buttonCol = $("<button>", {"id":`${i}`, "class":`col-md-2 saveBtn`})
+    var savedText = localStorage.getItem(`${i}`)
+    console.log(savedText);
+    $(taskCol).text(savedText);
+    var buttonCol = $("<button>", {"id":`btn${i}`, "class":`col-md-2 saveBtn`})
     var buttonI = $("<i>",{"class":'far fa-save fa-lg'})
     buttonCol.append(buttonI);
 
@@ -58,11 +61,16 @@ $(".saveBtn").on("click", function(myBtn) {
     event.preventDefault();
     //Pulls the Text Area based on which button was clicked
     var checkerID = $(this).siblings()[1];
-    if(!checkerID.textContent){
+    if($(checkerID).val() === ""){
         console.log("We in it to win it");
-    }
-    console.log(myBtn);
-    console.log(checkerID);
+        return;
+    } 
+    var saveText = $(checkerID).val();
+    var saveState = $(checkerID).attr("id");
+    localStorage.setItem(saveState, saveText);
+    console.log(saveState);
+    console.log(saveText);
+    // console.log(checkerID);
 });
 // TODO: Prevent Default
 
