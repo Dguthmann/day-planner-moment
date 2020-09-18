@@ -21,7 +21,7 @@ Past Events will be greyed in the task section.
 Present Events will be red in the task section.
 Future Events will be green in the task section.
 The Save button will save any text in the task box into local memory.  
-(note: must click out of the box before clicking for the save works)  
+(note: must click out of the box before clicking for the save works)
 
 
 ## Screenshot of Website
@@ -34,9 +34,9 @@ Aslan Ghodsian for leading a session on writing the psuedocode of the script
 
 ## Further Development Plans
 
-Minor Changes to color scheme.  Would be fun to break out the basic index, and use an api to build a better version.
+Minor Changes to color scheme.  Would be fun to break out the basic index, and use an api to build a better version, would have to change the element generation to check for month, day, year though.
 
 ## Changelog
 
-2020-09-15: Psuedocoding Script, Procedural Generation of html, Button functionality, saving to local, Bug fixing.
+2020-09-17: Psuedocoding Script, Procedural Generation of html, Button functionality, saving to local, Bug fixing.
 2020-09-16: Fleshing out basic html, to get a layout I want.
