@@ -21,7 +21,7 @@ var businessHours = ["9AM", "10AM", "11AM", "12PM", "1PM", "2PM", "3PM", "4PM", 
 for (let i = 0; i < businessHours.length; i++) {
     var newRow = $("<div>", {"class":'row time-block'});
     /// Loop of my array of house, and create a div for row, create div for hours, textarea, and div with imbedded i tag
-    var timeCol = $("<div>",{"id":`${i}`, "class":'col-md-2 hour'}).text(businessHours[i]);
+    var timeCol = $("<div>",{"class":'col-md-2 hour'}).text(businessHours[i]);
     // console.log(moment().format("H"), retrieves hours in military form, i=0 is 9 am.
     // if the hour is same (parseInt(moment().format(H)) == (i+9)), apply class of present
     if (parseInt(moment().format("H")) == (i + 9)) {
